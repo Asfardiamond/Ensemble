@@ -795,15 +795,240 @@ function TechStackSection({ dark }: { dark: boolean }) {
 // â”€â”€â”€ Portfolio â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const PROJECTS = [
-  { title: "MediCore EHR Platform", cat: "Healthcare", tech: ["React", "Node.js", "PostgreSQL"], color: "#17B8F5", img: "1576091160550-2173deca4a01" },
-  { title: "FinEdge Trading Dashboard", cat: "FinTech", tech: ["Next.js", "Python", "Redis"], color: "#2F8EB8", img: "1611974789855-9c2a0a7236a3" },
-  { title: "EduSphere LMS", cat: "EdTech", tech: ["Vue.js", "Laravel", "MySQL"], color: "#49B8E6", img: "1509062522246-3755977927d5" },
-  { title: "RetailMax E-Commerce", cat: "Retail", tech: ["Next.js", "Supabase", "Stripe"], color: "#17B8F5", img: "1556742049-0cfed4f6a45d" },
-  { title: "LogiTrack Fleet Manager", cat: "Logistics", tech: ["React Native", "AWS", "MongoDB"], color: "#2F8EB8", img: "1558618666-fcd25c85cd64" },
-  { title: "NovaBanking Mobile App", cat: "Banking", tech: ["Flutter", "Spring Boot", "Azure"], color: "#49B8E6", img: "1563013544-824ae1b704d3" },
+  {
+    title: "Ensemble Runner",
+    cat: "Fitness",
+    tech: ["React Native", "Node.js", "MongoDB"],
+    color: "#17B8F5",
+    img: "1461896836934-ffe607ba8211",
+    desc: "Comprehensive fitness tracking platform with workout planning, real-time leaderboards, and community chapters.",
+    caseStudy: {
+      challenge: "Users needed a unified platform to track running activities, compete with peers globally, and follow structured training programs without complexity or fragmented experiences.",
+      solution: "Built an AI-powered fitness app with real-time leaderboards, structured training schedules, community chapters, and comprehensive performance analytics. Features include workout tracking, chapter-based competitions, and personalized training plans.",
+      results: ["500+ active runners", "24k total distance tracked", "Real-time leaderboard rankings", "Structured training programs", "Community chapter system"],
+      features: ["Workout Tracking", "Leaderboards", "Training Schedules", "Activity Analytics", "Chapter Management"],
+      metrics: ["10.05 km Weekly Average", "02:02 Hours Weekly", "500+ Community Members"]
+    }
+  },
+  {
+    title: "Quran for Grammar",
+    cat: "Education",
+    tech: ["React", "Firebase", "Node.js"],
+    color: "#49B8E6",
+    img: "1507842714105-abc180db4855",
+    desc: "Interactive Quranic language learning with Tamil support, word-by-word grammar breakdowns, and vocabulary study.",
+    caseStudy: {
+      challenge: "Language learners struggled to understand Quranic Arabic grammar and vocabulary without proper contextual support and multi-language resources for better comprehension.",
+      solution: "Developed a comprehensive Quran learning platform with word-by-word grammar analysis, Tamil language translations, daily Ayah recommendations, vocabulary builders, and bookmarking features for personalized learning.",
+      results: ["Multilingual support (Arabic, Tamil, English)", "Word-by-word analysis system", "7-day streak tracking", "Vocabulary database", "Bookmark management"],
+      features: ["Grammar Analysis", "Word Breakdown", "Vocabulary Learning", "Daily Reminders", "Progress Tracking", "Bookmarks"],
+      metrics: ["286 Surahs", "6,236 Ayahs", "Tamil Translation Support"]
+    }
+  },
+  {
+    title: "Vista Bank",
+    cat: "FinTech",
+    tech: ["React Native", "Spring Boot", "PostgreSQL"],
+    color: "#2F8EB8",
+    img: "1563013544-824ae1b704d3",
+    desc: "Full-featured mobile banking with instant transfers, bill payments, account management, and advanced security.",
+    caseStudy: {
+      challenge: "Existing banking apps had complex transfer processes, unclear fee structures, weak security feedback, and poor accessibility for users with disabilities.",
+      solution: "Engineered a modern mobile banking platform with streamlined money transfer flows, transparent fee display, multi-factor authentication, real-time transaction tracking, and accessibility features.",
+      results: ["₹5,00,000+ average balance", "Instant IMPS transfers", "Zero transaction fees", "OTP verification system", "Email & SMS confirmation"],
+      features: ["Money Transfer", "Bill Payment", "Account Switching", "Transaction History", "OTP Verification", "Fingerprint Auth"],
+      metrics: ["₹20,000 Average Balance", "Multiple Account Support", "IMPS/NEFT Options"]
+    }
+  },
+  {
+    title: "Banking Dashboard",
+    cat: "Finance",
+    tech: ["React", "TypeScript", "Node.js"],
+    color: "#17B8F5",
+    img: "1611974789855-9c2a0a7236a3",
+    desc: "Enterprise banking dashboard with real-time insights, transaction management, and comprehensive financial analytics.",
+    caseStudy: {
+      challenge: "Financial institutions needed a dashboard that provides immediate visibility into account status, recent transactions, and quick access to banking operations with enterprise-grade security.",
+      solution: "Built a responsive dashboard featuring account overview cards, quick action buttons, detailed transaction history with type filtering, dark mode support, and encrypted session management.",
+      results: ["Real-time balance display", "6+ quick action buttons", "Transaction filtering", "Multi-account support", "Secure session tracking"],
+      features: ["Account Overview", "Quick Actions", "Transaction Reports", "Balance Visibility", "Security Status", "Responsive Design"],
+      metrics: ["₹5,00,000+ accounts", "6+ transaction types", "10+ quick actions"]
+    }
+  },
+  {
+    title: "NV Infra",
+    cat: "Real Estate",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    color: "#49B8E6",
+    img: "1560448204-e02f11d3d1c2",
+    desc: "Luxury real estate platform showcasing premium villas with portfolios, pricing, and seamless inquiry management.",
+    caseStudy: {
+      challenge: "Real estate companies struggled to effectively showcase luxury properties, manage inquiries, and provide transparent pricing information across multiple locations and project types.",
+      solution: "Developed a comprehensive real estate platform featuring project galleries, pricing packages, architectural design showcases, location mapping, and integrated lead capture system.",
+      results: ["200+ projects delivered", "500+ happy customers", "10+ offices across India", "25+ years experience", "5+ awards won"],
+      features: ["Project Gallery", "Pricing Packages", "Location Mapping", "Architecture Showcase", "Interior Design Gallery", "Contact Forms"],
+      metrics: ["200+ Projects", "500+ Customers", "10+ Offices", "₹1-5 Crore pricing"]
+    }
+  },
+  {
+    title: "MediCore EHR Platform",
+    cat: "Healthcare",
+    tech: ["React", "Node.js", "PostgreSQL"],
+    color: "#17B8F5",
+    img: "1576091160550-2173deca4a01",
+    desc: "Comprehensive electronic health record system with HIPAA compliance and integrated patient management.",
+    caseStudy: {
+      challenge: "Healthcare facilities needed a centralized system to manage patient records, appointments, prescriptions, and maintain strict regulatory compliance while ensuring data security.",
+      solution: "Created an enterprise-grade EHR platform with patient record management, appointment scheduling, prescription digitization, and comprehensive audit logging for regulatory compliance.",
+      results: ["HIPAA compliant", "500+ healthcare partners", "1M+ patient records", "Zero data breaches", "99.9% uptime"],
+      features: ["Patient Records", "Appointment Scheduling", "Prescription Management", "Lab Integration", "Audit Logging", "Role-Based Access"],
+      metrics: ["1M+ Records", "500+ Facilities", "99.9% Uptime"]
+    }
+  }
 ];
 
+function CaseStudyModal({ project, onClose, dark }: { project: typeof PROJECTS[0] | null; onClose: () => void; dark: boolean }) {
+  if (!project) return null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: "rgba(0,0,0,0.5)" }}
+    >
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.9, opacity: 0 }}
+        onClick={(e) => e.stopPropagation()}
+        className="max-w-4xl w-full rounded-3xl overflow-hidden max-h-[90vh] overflow-y-auto"
+        style={{ background: dark ? "#111827" : "#FFFFFF" }}
+      >
+        {/* Close Button */}
+        <div className="sticky top-0 flex justify-between items-center p-6 border-b" style={{ borderColor: dark ? "#1E3A50" : "#E5E7EB", background: dark ? "#0F1419" : "#F8FAFC" }}>
+          <h2 className="text-2xl font-bold" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#F1F5F9" : "#0F172A" }}>
+            {project.title}
+          </h2>
+          <button onClick={onClose} className="p-2 hover:bg-gray-200 rounded-lg transition" style={{ background: dark ? "#1E3A50" : "#E5E7EB" }}>
+            <X size={20} color={dark ? "#94A3B8" : "#64748B"} />
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="p-8 space-y-8">
+          {/* Project Image */}
+          <div className="h-72 rounded-2xl overflow-hidden">
+            <img
+              src={`https://images.unsplash.com/photo-${project.img}?w=800&h=500&fit=crop&auto=format`}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Challenge */}
+          <div>
+            <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#E2E8F0" : "#1E293B" }}>
+              The Challenge
+            </h3>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", color: dark ? "#94A3B8" : "#64748B", lineHeight: "1.6" }}>
+              {project.caseStudy.challenge}
+            </p>
+          </div>
+
+          {/* Solution */}
+          <div>
+            <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#E2E8F0" : "#1E293B" }}>
+              Our Solution
+            </h3>
+            <p style={{ fontFamily: "'DM Sans', sans-serif", color: dark ? "#94A3B8" : "#64748B", lineHeight: "1.6" }}>
+              {project.caseStudy.solution}
+            </p>
+          </div>
+
+          {/* Features Grid */}
+          <div>
+            <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#E2E8F0" : "#1E293B" }}>
+              Key Features
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {project.caseStudy.features.map((feature) => (
+                <div key={feature} className="p-3 rounded-lg" style={{ background: dark ? "#1A2640" : "#EFF9FE" }}>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle size={16} color="#17B8F5" />
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", color: "#17B8F5", fontSize: "0.875rem", fontWeight: 500 }}>
+                      {feature}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Results */}
+          <div>
+            <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#E2E8F0" : "#1E293B" }}>
+              Results & Impact
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {project.caseStudy.results.map((result, i) => (
+                <div key={i} className="p-4 rounded-lg border" style={{ borderColor: dark ? "#1E3A50" : "#E5E7EB", background: dark ? "#0F1419" : "#F8FAFC" }}>
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-lg" style={{ background: "#17B8F5" }}>
+                      <Rocket size={16} color="#FFFFFF" />
+                    </div>
+                    <p style={{ fontFamily: "'DM Sans', sans-serif", color: dark ? "#CBD5E1" : "#374151", fontSize: "0.875rem", fontWeight: 500 }}>
+                      {result}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Metrics */}
+          <div>
+            <h3 className="text-xl font-bold mb-4" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#E2E8F0" : "#1E293B" }}>
+              Key Metrics
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {project.caseStudy.metrics.map((metric, i) => (
+                <div key={i} className="p-6 rounded-2xl text-center" style={{ background: dark ? "#1A2640" : "#EFF9FE", border: `1px solid ${dark ? "#1E3A50" : "#E5E7EB"}` }}>
+                  <p style={{ fontFamily: "'Satoshi', sans-serif", fontSize: "1.25rem", fontWeight: 700, color: "#17B8F5", marginBottom: "0.5rem" }}>
+                    {metric.split(" ")[0]}
+                  </p>
+                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", color: dark ? "#94A3B8" : "#64748B" }}>
+                    {metric.split(" ").slice(1).join(" ")}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tech Stack */}
+          <div>
+            <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#E2E8F0" : "#1E293B" }}>
+              Technology Stack
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {project.tech.map((t) => (
+                <span key={t} className="px-4 py-2 rounded-full text-sm font-medium" style={{ background: project.color, color: "#FFFFFF", fontFamily: "'DM Sans', sans-serif" }}>
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
 function PortfolioSection({ dark }: { dark: boolean }) {
+  const [selectedProject, setSelectedProject] = useState<typeof PROJECTS[0] | null>(null);
+
   return (
     <Section id="portfolio" className="py-24 px-6" style={{ background: dark ? "#080E1A" : "#FFFFFF" } as React.CSSProperties}>
       <div className="max-w-7xl mx-auto">
@@ -818,7 +1043,7 @@ function PortfolioSection({ dark }: { dark: boolean }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PROJECTS.map(({ title, cat, tech, img }, i) => (
+          {PROJECTS.map(({ title, cat, tech, img, desc }, i) => (
             <motion.div
               key={title}
               initial={{ opacity: 0, y: 20 }}
@@ -826,11 +1051,12 @@ function PortfolioSection({ dark }: { dark: boolean }) {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
               whileHover={{ y: -5 }}
-              className="group rounded-2xl overflow-hidden"
+              className="group rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               style={{
                 background: dark ? "#111827" : "#F8FAFC",
                 border: `1px solid ${dark ? "#1E3A50" : "#E5E7EB"}`,
               }}
+              onClick={() => setSelectedProject(PROJECTS[i])}
             >
               <div className="relative h-48 overflow-hidden bg-slate-200">
                 <img
@@ -850,6 +1076,9 @@ function PortfolioSection({ dark }: { dark: boolean }) {
                 <h3 className="font-semibold mb-2" style={{ fontFamily: "'Satoshi', sans-serif", color: dark ? "#E2E8F0" : "#1E293B", fontSize: "1rem" }}>
                   {title}
                 </h3>
+                <p className="text-xs leading-relaxed mb-4 line-clamp-2" style={{ fontFamily: "'DM Sans', sans-serif", color: dark ? "#94A3B8" : "#64748B" }}>
+                  {desc}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {tech.map((t) => (
                     <span key={t} className="px-2.5 py-1 rounded-lg text-xs font-medium"
@@ -858,14 +1087,19 @@ function PortfolioSection({ dark }: { dark: boolean }) {
                     </span>
                   ))}
                 </div>
-                <button className="flex items-center gap-1.5 text-xs font-semibold transition-colors duration-200"
-                  style={{ fontFamily: "'DM Sans', sans-serif", color: "#17B8F5" }}>
+                <button className="flex items-center gap-1.5 text-xs font-semibold transition-colors duration-200 w-full justify-center py-2 rounded-lg"
+                  style={{ fontFamily: "'DM Sans', sans-serif", color: "#FFFFFF", background: "#17B8F5" }}>
                   View Case Study <ExternalLink size={12} />
                 </button>
               </div>
             </motion.div>
           ))}
         </div>
+
+        {/* Case Study Modal */}
+        {selectedProject && (
+          <CaseStudyModal project={selectedProject} onClose={() => setSelectedProject(null)} dark={dark} />
+        )}
       </div>
     </Section>
   );

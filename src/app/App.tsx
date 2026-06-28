@@ -87,7 +87,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
 // --- Section Wrapper ---
 
-function Section({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+function Section({ children, className = "", ...props }: React.ComponentPropsWithoutRef<"section">) {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
@@ -97,6 +97,7 @@ function Section({ children, className = "" }: { children: React.ReactNode; clas
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={className}
+      {...props}
     >
       {children}
     </motion.section>

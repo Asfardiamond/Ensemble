@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "motion/react";
 import {
   Menu, X, ArrowRight, ChevronDown, Globe, Smartphone,
@@ -9,7 +9,7 @@ import {
   ExternalLink, Play, Sun, Moon, ChevronRight, Users, Rocket, Clock
 } from "lucide-react";
 
-// â”€â”€â”€ Logo â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Logo ---
 
 function EnsembleLogo({ dark = false, size = 40 }: { dark?: boolean; size?: number }) {
   return (
@@ -62,7 +62,7 @@ function EnsembleLogo({ dark = false, size = 40 }: { dark?: boolean; size?: numb
   );
 }
 
-// â”€â”€â”€ Animated Counter â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Animated Counter ---
 
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const [count, setCount] = useState(0);
@@ -85,7 +85,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   return <span ref={ref}>{count}{suffix}</span>;
 }
 
-// â”€â”€â”€ Section Wrapper â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Section Wrapper ---
 
 function Section({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLElement>(null);
@@ -103,7 +103,7 @@ function Section({ children, className = "" }: { children: React.ReactNode; clas
   );
 }
 
-// â”€â”€â”€ Navbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Navbar ---
 
 const NAV_LINKS = ["Services", "Solutions", "Portfolio", "Pricing", "About", "Contact"];
 
@@ -212,7 +212,7 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
   );
 }
 
-// â”€â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Hero ---
 
 function HeroIllustration({ dark }: { dark: boolean }) {
   return (
@@ -453,7 +453,7 @@ function HeroSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Trusted By â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Trusted By ---
 
 const CLIENTS = [
   "TechForward", "MediCare Digital", "FinEdge Corp", "EduSphere",
@@ -504,7 +504,7 @@ function TrustedBy({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Services â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Services ---
 
 const SERVICES = [
   { icon: Globe, title: "Website Development", desc: "Blazing-fast, SEO-optimised websites built with modern frameworks that scale with your ambitions." },
@@ -537,7 +537,7 @@ function ServicesSection({ dark }: { dark: boolean }) {
             Full-Spectrum Digital Services
           </h2>
           <p className="max-w-xl mx-auto text-base" style={{ fontFamily: "'DM Sans', sans-serif", color: dark ? "#64748B" : "#64748B" }}>
-            From idea to launch and beyond â€” every service you need under one roof, delivered by specialists who care.
+            From idea to launch and beyond — every service you need under one roof, delivered by specialists who care.
           </p>
         </div>
 
@@ -579,7 +579,7 @@ function ServicesSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Why Choose â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Why Choose ---
 
 const STATS = [
   { value: 100, suffix: "+", label: "Projects Delivered", icon: Rocket },
@@ -625,7 +625,7 @@ function WhyChooseSection({ dark }: { dark: boolean }) {
               Built on Trust, Delivered with Excellence
             </h2>
             <p className="mb-8 leading-relaxed" style={{ fontFamily: "'DM Sans', sans-serif", color: dark ? "#94A3B8" : "#64748B" }}>
-              We don&apos;t just write code â€” we become your technology partner. Every project at Ensemble is backed by
+              We don&apos;t just write code — we become your technology partner. Every project at Ensemble is backed by
               rigorous process, senior oversight, and a genuine commitment to your success.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -638,7 +638,7 @@ function WhyChooseSection({ dark }: { dark: boolean }) {
             </div>
           </div>
 
-          {/* Right â€” stats */}
+          {/* Right — stats */}
           <div className="grid grid-cols-2 gap-5">
             {STATS.map(({ value, suffix, label, icon: Icon }) => (
               <motion.div
@@ -675,16 +675,16 @@ function WhyChooseSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Process â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Process ---
 
 const STEPS = [
   { num: "01", title: "Discovery", desc: "Deep-dive into your goals, audience, and constraints." },
   { num: "02", title: "Planning", desc: "Define scope, architecture, and a realistic timeline." },
-  { num: "03", title: "UI/UX Design", desc: "Wireframes â†’ high-fidelity prototypes with your feedback." },
+  { num: "03", title: "UI/UX Design", desc: "Wireframes → high-fidelity prototypes with your feedback." },
   { num: "04", title: "Development", desc: "Agile sprints, code reviews, and daily standups." },
   { num: "05", title: "Testing", desc: "QA, performance, security, and accessibility audits." },
   { num: "06", title: "Deployment", desc: "Zero-downtime release, monitoring, and alerting setup." },
-  { num: "07", title: "Launch", desc: "Go live with confidence â€” everything checked twice." },
+  { num: "07", title: "Launch", desc: "Go live with confidence — everything checked twice." },
   { num: "08", title: "Support", desc: "Ongoing maintenance, iterations, and 24/7 incident response." },
 ];
 
@@ -741,7 +741,7 @@ function ProcessSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Tech Stack â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Tech Stack ---
 
 const TECHS = [
   "React", "Next.js", "Angular", "Vue.js", "TypeScript",
@@ -792,97 +792,97 @@ function TechStackSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Portfolio â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Portfolio ---
 
 const PROJECTS = [
   {
-    title: "Ensemble Runner",
+    title: "Dream Runners",
     cat: "Fitness",
-    tech: ["React Native", "Node.js", "MongoDB"],
+    tech: ["React Native", "Node.js", "MongoDB", "Google Maps", "Firebase", "REST APIs"],
     color: "#17B8F5",
-    img: "1461896836934-ffe607ba8211",
-    desc: "Comprehensive fitness tracking platform with workout planning, real-time leaderboards, and community chapters.",
+    img: "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=800&q=80",
+    desc: "Running and marathon platform with AI coaching, leaderboards, chapters, and race preparation tools.",
     caseStudy: {
-      challenge: "Users needed a unified platform to track running activities, compete with peers globally, and follow structured training programs without complexity or fragmented experiences.",
-      solution: "Built an AI-powered fitness app with real-time leaderboards, structured training schedules, community chapters, and comprehensive performance analytics. Features include workout tracking, chapter-based competitions, and personalized training plans.",
-      results: ["500+ active runners", "24k total distance tracked", "Real-time leaderboard rankings", "Structured training programs", "Community chapter system"],
-      features: ["Workout Tracking", "Leaderboards", "Training Schedules", "Activity Analytics", "Chapter Management"],
-      metrics: ["10.05 km Weekly Average", "02:02 Hours Weekly", "500+ Community Members"]
+      challenge: "Running enthusiasts struggled with disconnected fitness apps that lacked structured training plans, community engagement, real-time leaderboards, and race preparation tools.",
+      solution: "Designed a comprehensive fitness platform that combines AI-powered workout tracking, structured marathon training schedules, real-time leaderboards, chapter-based communities, race countdowns, and performance analytics.",
+      results: ["500+ active community runners", "Real-time global rankings", "Structured weekly training plans", "Community chapter engagement", "Performance insights dashboard", "Improved runner motivation"],
+      features: ["Workout Tracking", "Marathon Training Plans", "Community Chapters", "Leaderboards", "Race Countdown", "Performance Analytics", "Activity History", "Challenge System", "Progress Dashboard", "Race Day Information"],
+      metrics: ["10.05 km Weekly Average Distance", "02:02 Hrs Weekly Training Time", "500+ Community Members"]
     }
   },
   {
-    title: "Quran for Grammar",
-    cat: "Education",
-    tech: ["React", "Firebase", "Node.js"],
-    color: "#49B8E6",
-    img: "1507842714105-abc180db4855",
-    desc: "Interactive Quranic language learning with Tamil support, word-by-word grammar breakdowns, and vocabulary study.",
-    caseStudy: {
-      challenge: "Language learners struggled to understand Quranic Arabic grammar and vocabulary without proper contextual support and multi-language resources for better comprehension.",
-      solution: "Developed a comprehensive Quran learning platform with word-by-word grammar analysis, Tamil language translations, daily Ayah recommendations, vocabulary builders, and bookmarking features for personalized learning.",
-      results: ["Multilingual support (Arabic, Tamil, English)", "Word-by-word analysis system", "7-day streak tracking", "Vocabulary database", "Bookmark management"],
-      features: ["Grammar Analysis", "Word Breakdown", "Vocabulary Learning", "Daily Reminders", "Progress Tracking", "Bookmarks"],
-      metrics: ["286 Surahs", "6,236 Ayahs", "Tamil Translation Support"]
-    }
-  },
-  {
-    title: "Vista Bank",
-    cat: "FinTech",
-    tech: ["React Native", "Spring Boot", "PostgreSQL"],
+    title: "School Transport Management System",
+    cat: "Logistics",
+    tech: ["Flutter", "Node.js", "Google Maps API", "Firebase", "MongoDB", "Push Notifications"],
     color: "#2F8EB8",
-    img: "1563013544-824ae1b704d3",
-    desc: "Full-featured mobile banking with instant transfers, bill payments, account management, and advanced security.",
+    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+    desc: "Transport ecosystem for parents, drivers, and administrators with live GPS, route monitoring, and trip updates.",
     caseStudy: {
-      challenge: "Existing banking apps had complex transfer processes, unclear fee structures, weak security feedback, and poor accessibility for users with disabilities.",
-      solution: "Engineered a modern mobile banking platform with streamlined money transfer flows, transparent fee display, multi-factor authentication, real-time transaction tracking, and accessibility features.",
-      results: ["₹5,00,000+ average balance", "Instant IMPS transfers", "Zero transaction fees", "OTP verification system", "Email & SMS confirmation"],
-      features: ["Money Transfer", "Bill Payment", "Account Switching", "Transaction History", "OTP Verification", "Fingerprint Auth"],
-      metrics: ["₹20,000 Average Balance", "Multiple Account Support", "IMPS/NEFT Options"]
+      challenge: "Schools lacked a centralized transport management system for parents, drivers, transport administrators, and employees.",
+      solution: "Designed a complete transport ecosystem with dedicated applications for Parents, Drivers, and Employees, providing live GPS tracking, absence management, notifications, route monitoring, vehicle details, and trip history.",
+      results: ["Improved student safety", "Real-time transport visibility", "Reduced parent enquiries", "Faster communication", "Better fleet monitoring", "Simplified transport operations"],
+      features: ["Live GPS Bus Tracking", "Parent Dashboard", "Driver Application", "Employee Portal", "Route Management", "Attendance & Absence", "Vehicle Information", "Driver Details", "Push Notifications", "Trip History", "Emergency Contacts", "Feedback System"],
+      metrics: ["3 User Applications", "Live GPS Tracking", "100% Route Transparency"]
     }
   },
   {
-    title: "Banking Dashboard",
-    cat: "Finance",
-    tech: ["React", "TypeScript", "Node.js"],
-    color: "#17B8F5",
-    img: "1611974789855-9c2a0a7236a3",
-    desc: "Enterprise banking dashboard with real-time insights, transaction management, and comprehensive financial analytics.",
-    caseStudy: {
-      challenge: "Financial institutions needed a dashboard that provides immediate visibility into account status, recent transactions, and quick access to banking operations with enterprise-grade security.",
-      solution: "Built a responsive dashboard featuring account overview cards, quick action buttons, detailed transaction history with type filtering, dark mode support, and encrypted session management.",
-      results: ["Real-time balance display", "6+ quick action buttons", "Transaction filtering", "Multi-account support", "Secure session tracking"],
-      features: ["Account Overview", "Quick Actions", "Transaction Reports", "Balance Visibility", "Security Status", "Responsive Design"],
-      metrics: ["₹5,00,000+ accounts", "6+ transaction types", "10+ quick actions"]
-    }
-  },
-  {
-    title: "NV Infra",
-    cat: "Real Estate",
-    tech: ["Next.js", "React", "Tailwind CSS"],
+    title: "Quran for Grammar (Tamil)",
+    cat: "Education",
+    tech: ["Flutter", "Firebase", "SQLite", "REST API", "Audio Streaming"],
     color: "#49B8E6",
-    img: "1560448204-e02f11d3d1c2",
-    desc: "Luxury real estate platform showcasing premium villas with portfolios, pricing, and seamless inquiry management.",
+    img: "https://plus.unsplash.com/premium_photo-1677587536653-0d02efbb70ee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    desc: "Quran learning platform with grammar explanations, Tamil support, bookmarks, and progress tracking.",
     caseStudy: {
-      challenge: "Real estate companies struggled to effectively showcase luxury properties, manage inquiries, and provide transparent pricing information across multiple locations and project types.",
-      solution: "Developed a comprehensive real estate platform featuring project galleries, pricing packages, architectural design showcases, location mapping, and integrated lead capture system.",
-      results: ["200+ projects delivered", "500+ happy customers", "10+ offices across India", "25+ years experience", "5+ awards won"],
-      features: ["Project Gallery", "Pricing Packages", "Location Mapping", "Architecture Showcase", "Interior Design Gallery", "Contact Forms"],
-      metrics: ["200+ Projects", "500+ Customers", "10+ Offices", "₹1-5 Crore pricing"]
+      challenge: "Learning Quranic Arabic grammar is difficult for Tamil-speaking learners because most resources separate grammar explanations from Quran reading.",
+      solution: "Designed a learning platform that integrates Quran reading with word-by-word grammar explanations, vocabulary learning, bookmarks, progress tracking, daily streaks, and multilingual support.",
+      results: ["Simplified Quran grammar learning", "Improved daily engagement", "Interactive educational experience", "Personalized learning journey", "Vocabulary retention"],
+      features: ["Word-by-Word Grammar", "Quran Reading", "Tamil Translation", "Vocabulary Builder", "Daily Streak", "Bookmarks", "Audio Playback", "Search Surahs", "Premium Learning", "Progress Tracking"],
+      metrics: ["114 Surahs", "7 Days Learning Streak", "100% Tamil Grammar Support"]
     }
   },
   {
-    title: "MediCore EHR Platform",
-    cat: "Healthcare",
-    tech: ["React", "Node.js", "PostgreSQL"],
-    color: "#17B8F5",
-    img: "1576091160550-2173deca4a01",
-    desc: "Comprehensive electronic health record system with HIPAA compliance and integrated patient management.",
+    title: "Manateq Website Redesign",
+    cat: "Corporate",
+    tech: ["Figma", "HTML5", "CSS3", "JavaScript", "Responsive Design", "UI Design System"],
+    color: "#F59E0B",
+    img: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80",
+    desc: "Modern enterprise website redesign with improved navigation, engagement, and investor-focused experience.",
     caseStudy: {
-      challenge: "Healthcare facilities needed a centralized system to manage patient records, appointments, prescriptions, and maintain strict regulatory compliance while ensuring data security.",
-      solution: "Created an enterprise-grade EHR platform with patient record management, appointment scheduling, prescription digitization, and comprehensive audit logging for regulatory compliance.",
-      results: ["HIPAA compliant", "500+ healthcare partners", "1M+ patient records", "Zero data breaches", "99.9% uptime"],
-      features: ["Patient Records", "Appointment Scheduling", "Prescription Management", "Lab Integration", "Audit Logging", "Role-Based Access"],
-      metrics: ["1M+ Records", "500+ Facilities", "99.9% Uptime"]
+      challenge: "The existing corporate website had outdated navigation, weak visual hierarchy, limited user engagement, and a traditional layout.",
+      solution: "Redesigned the website with a modern enterprise experience focused on improved navigation, responsive layouts, interactive service sections, dynamic statistics, stronger CTAs, and a refined visual identity.",
+      results: ["Better content accessibility", "Improved navigation flow", "Stronger visual branding", "Increased user engagement", "Enhanced mobile experience", "Better investor experience"],
+      features: ["Enterprise Website", "Responsive Design", "Modern Navigation", "Interactive Service Cards", "Statistics Dashboard", "Contact Forms", "Testimonials", "Mobile Optimization", "Improved Information Architecture", "CTA Optimization"],
+      metrics: ["13 Industrial Zones", "47M+ SQM Development Area", "71% Operational Units"]
+    }
+  },
+  {
+    title: "Library Management System",
+    cat: "Education",
+    tech: ["React", "Node.js", "MongoDB", "Dashboard UI", "REST APIs"],
+    color: "#10B981",
+    img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=800&q=80",
+    desc: "Centralized library management platform for inventory, members, borrowing, and reporting.",
+    caseStudy: {
+      challenge: "Libraries struggle with manually tracking multiple copies of books, borrowing history, overdue returns, and member management.",
+      solution: "Designed a digital Library Management System that streamlines book inventory, member management, borrowing workflows, overdue tracking, accession management, dashboards, and reporting.",
+      results: ["Reduced manual work", "Improved inventory accuracy", "Faster book management", "Better borrowing visibility", "Efficient librarian workflow"],
+      features: ["Library Dashboard", "Book Inventory", "Member Management", "Borrow & Return", "Accession Tracking", "Overdue Management", "Book History", "Search & Filters", "Reports", "Analytics"],
+      metrics: ["11,205 Books Managed", "2,420 Members", "320 Borrowed Books"]
+    }
+  },
+  {
+    title: "NV Infra Real Estate Website",
+    cat: "Real Estate",
+    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Google Maps", "CMS Integration"],
+    color: "#8B5CF6",
+    img: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80",
+    desc: "Luxury real estate website showcasing premium villas, portfolios, pricing, and lead generation.",
+    caseStudy: {
+      challenge: "Luxury real estate companies require a visually appealing digital presence that showcases premium properties and generates qualified leads.",
+      solution: "Designed a modern real estate website that highlights luxury villas, project portfolios, pricing packages, company expertise, and enquiry forms with a clean user experience.",
+      results: ["Premium brand perception", "Improved property discovery", "Better customer engagement", "Increased enquiry opportunities", "Modern digital presence"],
+      features: ["Property Showcase", "Villa Portfolio", "Pricing Packages", "Company Overview", "Contact Forms", "Interactive Gallery", "Project Highlights", "Lead Generation", "Responsive Design"],
+      metrics: ["25+ Years Experience", "200+ Projects Completed", "500+ Happy Customers"]
     }
   }
 ];
@@ -922,7 +922,7 @@ function CaseStudyModal({ project, onClose, dark }: { project: typeof PROJECTS[0
           {/* Project Image */}
           <div className="h-72 rounded-2xl overflow-hidden">
             <img
-              src={`https://images.unsplash.com/photo-${project.img}?w=800&h=500&fit=crop&auto=format`}
+              src={project.img}
               alt={project.title}
               className="w-full h-full object-cover"
             />
@@ -1060,7 +1060,7 @@ function PortfolioSection({ dark }: { dark: boolean }) {
             >
               <div className="relative h-48 overflow-hidden bg-slate-200">
                 <img
-                  src={`https://images.unsplash.com/photo-${img}?w=480&h=280&fit=crop&auto=format`}
+                  src={img}
                   alt={title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -1105,7 +1105,7 @@ function PortfolioSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Testimonials â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Testimonials ---
 
 const TESTIMONIALS = [
   {
@@ -1181,7 +1181,7 @@ function TestimonialsSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Pricing â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Pricing ---
 
 const PLANS = [
   {
@@ -1288,13 +1288,13 @@ function PricingSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ FAQ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- FAQ ---
 
 const FAQS = [
-  { q: "How long does a typical project take?", a: "Timelines vary by scope. A standard website takes 3â€“5 weeks; a complex web app or mobile product is typically 8â€“16 weeks. We provide a detailed schedule after our discovery phase." },
+  { q: "How long does a typical project take?", a: "Timelines vary by scope. A standard website takes 3–5 weeks; a complex web app or mobile product is typically 8–16 weeks. We provide a detailed schedule after our discovery phase." },
   { q: "Do you offer post-launch support?", a: "Yes. All projects include a support period (length depends on plan), and we offer ongoing maintenance retainers for bug fixes, updates, and feature additions." },
   { q: "Can you work with our existing codebase?", a: "Absolutely. We regularly take over legacy codebases, perform audits, refactor, and extend them. We&apos;ll provide an honest assessment before committing to anything." },
-  { q: "What industries do you specialise in?", a: "Healthcare, FinTech, EdTech, Retail, Logistics, Enterprise SaaS â€” though our engineering practices apply across any domain. We ask the right questions to adapt quickly." },
+  { q: "What industries do you specialise in?", a: "Healthcare, FinTech, EdTech, Retail, Logistics, Enterprise SaaS — though our engineering practices apply across any domain. We ask the right questions to adapt quickly." },
   { q: "Is my data and IP protected?", a: "Yes. We sign NDAs and assign full IP ownership to you upon final payment. All client data is handled under strict confidentiality agreements." },
   { q: "Do you work with international clients?", a: "Yes. We have clients across North America, Europe, the Middle East, and Southeast Asia. Remote collaboration is a core competency, not an afterthought." },
 ];
@@ -1357,7 +1357,7 @@ function FAQSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Contact â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Contact ---
 
 const SERVICES_OPTIONS = [
   "Website Development", "Mobile App Development", "UI/UX Design", "Backend / API",
@@ -1391,7 +1391,7 @@ function ContactSection({ dark }: { dark: boolean }) {
           <div className="lg:col-span-2 space-y-5">
             {[
               { icon: Mail, label: "Email Us", value: "hello@ensembleits.com", sub: "We reply within 24 hours" },
-              { icon: Phone, label: "Call Us", value: "+1 (555) 020-1234", sub: "Monâ€“Fri, 9amâ€“6pm EST" },
+              { icon: Phone, label: "Call Us", value: "+1 (555) 020-1234", sub: "Mon–Fri, 9am–6pm EST" },
               { icon: MapPin, label: "Office", value: "123 Innovation Drive", sub: "Tech District, NY 10001" },
             ].map(({ icon: Icon, label, value, sub }) => (
               <div key={label} className="flex gap-4 p-5 rounded-2xl"
@@ -1502,7 +1502,7 @@ function ContactSection({ dark }: { dark: boolean }) {
                     }}
                   >
                     <option value="" disabled>Budget Range</option>
-                    {["Under $1K", "$1Kâ€“$5K", "$5Kâ€“$20K", "$20Kâ€“$50K", "$50K+"].map((b) => <option key={b} value={b}>{b}</option>)}
+                    {["Under $1K", "$1K–$5K", "$5K–$20K", "$20K–$50K", "$50K+"].map((b) => <option key={b} value={b}>{b}</option>)}
                   </select>
                 </div>
                 <textarea
@@ -1538,7 +1538,7 @@ function ContactSection({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- Footer ---
 
 function Footer({ dark }: { dark: boolean }) {
   return (
@@ -1573,7 +1573,7 @@ function Footer({ dark }: { dark: boolean }) {
           {[
             { heading: "Services", links: ["Website Dev", "Mobile Apps", "UI/UX Design", "Cloud Solutions", "AI Integration"] },
             { heading: "Company", links: ["About Us", "Portfolio", "Case Studies", "Careers", "Blog"] },
-            { heading: "Contact", links: ["hello@ensembleits.com", "+1 555-020-1234", "Privacy Policy", "Terms of Service", "Sitemap"] },
+            { heading: "Contact", links: ["hello@ensembleits.com", "+91 9876543210", "Privacy Policy", "Terms of Service", "Sitemap"] },
           ].map(({ heading, links }) => (
             <div key={heading}>
               <h4 className="font-semibold text-sm mb-4"
@@ -1634,10 +1634,10 @@ function Footer({ dark }: { dark: boolean }) {
           style={{ borderColor: "#1E293B" }}
         >
           <p className="text-xs" style={{ fontFamily: "'DM Sans', sans-serif", color: "#475569" }}>
-            Â© 2025 Ensemble IT Solutions. All rights reserved.
+            © 2025 Ensemble IT Solutions. All rights reserved.
           </p>
           <p className="text-xs" style={{ fontFamily: "'DM Sans', sans-serif", color: "#475569" }}>
-            Built with â¤ by the Ensemble Team Â· We simplify the world
+            Built with ❤ by the Ensemble Team · We simplify the world
           </p>
         </div>
       </div>
@@ -1645,7 +1645,7 @@ function Footer({ dark }: { dark: boolean }) {
   );
 }
 
-// â”€â”€â”€ App â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// --- App ---
 
 export default function App() {
   const [dark, setDark] = useState(false);

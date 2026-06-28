@@ -1109,18 +1109,18 @@ function PortfolioSection({ dark }: { dark: boolean }) {
 
 const TESTIMONIALS = [
   {
-    name: "Sarah Mitchell", role: "CTO, FinEdge Corp", stars: 5,
-    text: "Ensemble delivered our trading dashboard in 6 weeks with zero bugs at launch. Their engineering quality is genuinely world-class. We&apos;ve since engaged them for three more projects.",
+    name: "Arun R.", role: "Founder, Dream Runners", stars: 5,
+    text: "Ensemble delivered our running app with an engaging interface and smooth GPS integration. The product launch exceeded our retention and performance targets.",
     img: "1494790108377-be9c29b29330",
   },
   {
-    name: "Dr. Arjun Patel", role: "Director, MediCore Health", stars: 5,
-    text: "The EHR platform they built handles 50,000 daily active users without a hiccup. Their attention to HIPAA compliance and accessibility gave us confidence from day one.",
+    name: "Leena S.", role: "Operations Head, School Transport Management System", stars: 5,
+    text: "Their team built a reliable transport platform that simplified route monitoring, parent communication, and admin workflows in a single launch-ready product.",
     img: "1507003211169-0a1dd7228f2d",
   },
   {
-    name: "Priya Nair", role: "Founder, EduSphere", stars: 5,
-    text: "Outstanding team. They understood our vision immediately, challenged us where needed, and delivered a product that genuinely changed how our students learn.",
+    name: "Mohammed K.", role: "Product Lead, NV Infra Real Estate", stars: 5,
+    text: "The website redesign elevated our premium brand and improved lead generation. The team was responsive, detail-oriented, and delivery-focused.",
     img: "1438761681033-6461ffad8d80",
   },
 ];
@@ -1391,8 +1391,8 @@ function ContactSection({ dark }: { dark: boolean }) {
           <div className="lg:col-span-2 space-y-5">
             {[
               { icon: Mail, label: "Email Us", value: "hello@ensembleits.com", sub: "We reply within 24 hours" },
-              { icon: Phone, label: "Call Us", value: "+1 (555) 020-1234", sub: "Mon–Fri, 9am–6pm EST" },
-              { icon: MapPin, label: "Office", value: "123 Innovation Drive", sub: "Tech District, NY 10001" },
+              { icon: Phone, label: "Call Us", value: "+91 8148831989", sub: "Mon–Fri, 10am–7pm IST" },
+              { icon: MapPin, label: "Office", value: "1, New Secretariat colony 5th Street, Velachery, Chennai, 600042", sub: "India" },
             ].map(({ icon: Icon, label, value, sub }) => (
               <div key={label} className="flex gap-4 p-5 rounded-2xl"
                 style={{ background: dark ? "#111827" : "#F8FAFC", border: `1px solid ${dark ? "#1E3A50" : "#E5E7EB"}` }}>
@@ -1573,7 +1573,7 @@ function Footer({ dark }: { dark: boolean }) {
           {[
             { heading: "Services", links: ["Website Dev", "Mobile Apps", "UI/UX Design", "Cloud Solutions", "AI Integration"] },
             { heading: "Company", links: ["About Us", "Portfolio", "Case Studies", "Careers", "Blog"] },
-            { heading: "Contact", links: ["hello@ensembleits.com", "+91 9876543210", "Privacy Policy", "Terms of Service", "Sitemap"] },
+            { heading: "Contact", links: ["hello@ensembleits.com", "+91 8148831989", "Privacy Policy", "Terms of Service", "Sitemap"] },
           ].map(({ heading, links }) => (
             <div key={heading}>
               <h4 className="font-semibold text-sm mb-4"

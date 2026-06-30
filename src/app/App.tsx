@@ -129,9 +129,11 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 backdrop-blur-md border-b ${base}`}
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <EnsembleLogo dark={dark} />
+        <a href="#home" className="cursor-pointer hover:opacity-80 transition-opacity">
+          <EnsembleLogo dark={dark} />
+        </a>
 
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-8" style={{ display: "none" }}>
           {NAV_LINKS.map((link) => (
             <li key={link}>
               <a
@@ -169,7 +171,7 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
           >
             Get Started <ArrowRight size={14} />
           </a>
-          <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} style={{ color: dark ? "#F1F5F9" : "#202124" }}>
+          <button className="lg:hidden p-2" onClick={() => setMenuOpen(!menuOpen)} style={{ color: dark ? "#F1F5F9" : "#202124", display: "none" }}>
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -182,6 +184,7 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
           style={{
             background: dark ? "#0D1626" : "#FFFFFF",
             borderColor: dark ? "#1E3A50" : "#E5E7EB",
+            display: "none",
           }}
         >
           {NAV_LINKS.map((link) => (
@@ -217,7 +220,7 @@ function Navbar({ dark, toggleDark }: { dark: boolean; toggleDark: () => void })
 
 function HeroIllustration({ dark }: { dark: boolean }) {
   return (
-    <div className="relative w-full max-w-[520px] mx-auto aspect-square select-none">
+    <div className="relative w-full max-w-[520px] mx-auto aspect-square select-none flex items-center justify-center">
       {/* Grid background */}
       <div className="absolute inset-0 opacity-10" style={{
         backgroundImage: `linear-gradient(${dark ? "#17B8F5" : "#2F8EB8"} 1px, transparent 1px),
@@ -1671,8 +1674,6 @@ export default function App() {
       <ProcessSection dark={dark} />
       <TechStackSection dark={dark} />
       <PortfolioSection dark={dark} />
-      <TestimonialsSection dark={dark} />
-      <PricingSection dark={dark} />
       <FAQSection dark={dark} />
       <ContactSection dark={dark} />
       <Footer dark={dark} />
